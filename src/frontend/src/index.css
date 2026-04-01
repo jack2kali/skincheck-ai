@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("/assets/fonts/DMSerifDisplay.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* SkinCheck AI palette — light medical-health aesthetic */
+    /* Page background: cool gray #F7FAFC => oklch(0.977 0.007 220) */
+    --background: 0.977 0.007 220;
+    /* Foreground: deep navy #0F172A => oklch(0.176 0.03 264) */
+    --foreground: 0.176 0.03 264;
+    /* Card: white #FFFFFF */
+    --card: 1 0 0;
+    --card-foreground: 0.176 0.03 264;
+    --popover: 1 0 0;
+    --popover-foreground: 0.176 0.03 264;
+    /* Primary CTA blue #2F6FA7 => oklch(0.52 0.1 240) */
+    --primary: 0.52 0.1 240;
+    --primary-foreground: 1 0 0;
+    /* Secondary teal #3AA7A0 => oklch(0.64 0.1 186) */
+    --secondary: 0.64 0.1 186;
+    --secondary-foreground: 1 0 0;
+    /* Muted: light blue-gray */
+    --muted: 0.94 0.012 220;
+    --muted-foreground: 0.51 0.018 240;
+    /* Accent: hero bg #D8EAFB => oklch(0.929 0.04 226) */
+    --accent: 0.929 0.04 226;
+    --accent-foreground: 0.176 0.03 264;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    /* Border: #E6EDF5 => oklch(0.92 0.018 228) */
+    --border: 0.92 0.018 228;
+    --input: 0.92 0.018 228;
+    --ring: 0.52 0.1 240;
+    /* Confidence gauge */
+    --success: 0.72 0.17 145;
+    --warning: 0.75 0.17 68;
+    --error: 0.62 0.22 28;
+    /* Chart */
+    --chart-1: 0.52 0.1 240;
+    --chart-2: 0.64 0.1 186;
+    --chart-3: 0.72 0.17 145;
+    --chart-4: 0.75 0.17 68;
+    --chart-5: 0.62 0.22 28;
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.176 0.03 264;
+    --sidebar-primary: 0.52 0.1 240;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.929 0.04 226;
+    --sidebar-accent-foreground: 0.176 0.03 264;
+    --sidebar-border: 0.92 0.018 228;
+    --sidebar-ring: 0.52 0.1 240;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
